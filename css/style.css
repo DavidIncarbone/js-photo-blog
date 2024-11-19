@@ -1,0 +1,38 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General */
+
+body {
+
+    font-family: "Edu TAS Beginner", "sans-serif";
+}
+
+img {
+    width: 100%;
+}
+
+
+/* Header */
+
+h1 {
+
+    text-align: center;
+}
+
+/* main */
+
+.container {
+
+    margin: 0, auto;
+    max-width: 1200px;
+    display: flex;
+    gap: 15px;
+    border: 1px solid red;
+
+}
