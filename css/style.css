@@ -34,16 +34,18 @@ h1 {
 
     text-align: center;
     padding: 20px 0;
+    text-transform: uppercase;
+    font-size: 4rem;
 }
 
 /* main */
 
-main {
+/* main {
     background-image: url(../img/cork.png);
-}
+} */
 
 .container {
-    margin: 0 auto;
+    margin: 30px auto;
     max-width: 800px;
     display: flex;
     flex-wrap: wrap;
@@ -53,8 +55,44 @@ main {
 }
 
 .card {
-
-    width: calc((100% / 3) - 15px);
+    position: relative;
     display: flex;
+    flex-direction: column;
+    width: calc((100% / 3) - 15px);
+    padding: 15px;
 
+}
+
+.pin {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 20px;
+}
+
+/* ********** MEDIA QUERY ********** */
+
+/* Tablet */
+
+@media screen and (max-width: 790px) {
+    .card {
+        width: calc((100% / 2) - 15px);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+/* mobile */
+
+@media screen and (max-width: 507px) {
+    .card {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
 }
