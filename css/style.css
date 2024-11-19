@@ -11,6 +11,7 @@
 body {
 
     font-family: "Edu TAS Beginner", "sans-serif";
+
 }
 
 img {
@@ -20,19 +21,33 @@ img {
 
 /* Header */
 
+header {
+    background-image: url(../img/wall.png);
+}
+
 h1 {
 
     text-align: center;
+    padding: 20px 0;
 }
 
 /* main */
+
+main {
+    background-image: url(../img/cork.png);
+}
 
 .container {
     margin: 0 auto;
     max-width: 800px;
     display: flex;
-    gap: 15px;
+    justify-content: space-between;
     border: 1px solid red;
     height: 20vh;
 
+}
+
+.card {
+
+    width
 }
