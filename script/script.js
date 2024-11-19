@@ -22,10 +22,15 @@ axios.get(baseUrl + resourcePhotos, { params })
         const images = [];
         let template = "";
         for (let photo of cards) {
+
             const images = photo.url;
+            console.log(images);
+
             const title = photo.title;
+            console.log(title);
+
             template += `
-                <div class="card debug">
+                <div class="card">
                 <div class="pin">
                     <img src="./img/pin.svg" alt="pin">
                 </div>
