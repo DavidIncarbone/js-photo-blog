@@ -8,6 +8,11 @@
 
 /* General */
 
+.debug {
+
+    border: 1px solid red;
+}
+
 body {
 
     font-family: "Edu TAS Beginner", "sans-serif";
@@ -41,13 +46,15 @@ main {
     margin: 0 auto;
     max-width: 800px;
     display: flex;
-    justify-content: space-between;
-    border: 1px solid red;
-    height: 20vh;
+    flex-wrap: wrap;
+    gap: 15px;
+
 
 }
 
 .card {
 
-    width
+    width: calc((100% / 3) - 15px);
+    display: flex;
+
 }
