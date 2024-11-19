@@ -40,12 +40,13 @@ h1 {
 
 /* main */
 
-/* main {
+main {
     background-image: url(../img/cork.png);
-} */
+}
 
 .container {
-    margin: 30px auto;
+    margin: 0 auto;
+    padding: 30px 0 15px 0;
     max-width: 800px;
     display: flex;
     flex-wrap: wrap;
@@ -60,6 +61,8 @@ h1 {
     flex-direction: column;
     width: calc((100% / 3) - 15px);
     padding: 15px;
+    background-color: white;
+
 
 }
 
