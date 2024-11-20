@@ -75,6 +75,7 @@ main {
     padding: 15px;
     background-color: white;
     cursor: pointer;
+    box-shadow: 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .card:hover {
@@ -82,6 +83,8 @@ main {
     transform: rotate(20deg) scale(1.2);
     transition: 0.5s;
     z-index: 100;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.5);
+
 
 }
 
