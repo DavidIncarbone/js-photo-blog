@@ -12,12 +12,17 @@ const container = document.querySelector(".container");
 console.log(container);
 const main = document.querySelector("main");
 console.log(main);
-const overlayContainer = document.querySelector(".overlay");
-console.log(overlayContainer);
 const button = document.querySelector("button");
 console.log(button);
 const giantCard = document.querySelector(".giantCard");
 console.log(giantCard);
+const overlayContainer = document.querySelector(".overlay-container");
+console.log(overlayContainer);
+
+
+
+
+
 
 
 // Call function
@@ -60,9 +65,14 @@ function photoPrinter() {
             for (let i = 0; i <= realImages.length - 1; i++) {
                 const singleImage = realImages[i];
                 console.log(singleImage);
-                template +=
-                    singleImage.addEventListener("click", overlay);
+                singleImage.addEventListener("click", overlay);
+
+
             }
+            const realCards = document.querySelectorAll(".card");
+            const imgCard = realCards.querySelector(".imagesClass");
+            console.log(imgCard);
+
 
         })
         .catch((error) => {
@@ -71,13 +81,13 @@ function photoPrinter() {
 }
 
 
+
 function overlay(event) {
     console.log(event.target);
     const imageUrl = event.target.src;
     const giantImage = document.getElementById("giantImage");
     giantImage.src = imageUrl;
-    container.classList.add("d-none");
-    main.classList.add("overlay");
+    overlayContainer.classList.add("overlay");
     button.classList.remove("d-none");
     giantCard.classList.remove("d-none");
 
@@ -85,7 +95,7 @@ function overlay(event) {
 
 function overlayCloser() {
     container.classList.remove("d-none");
-    main.classList.remove("overlay");
+    overlayContainer.classList.remove("overlay");
     button.classList.add("d-none");
     giantCard.classList.add("d-none");
 
