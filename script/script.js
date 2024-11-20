@@ -88,6 +88,7 @@ function overlay(event) {
     const giantImage = document.getElementById("giantImage");
     giantImage.src = imageUrl;
     overlayContainer.classList.add("overlay");
+    overlayContainer.classList.remove("d-none");
     button.classList.remove("d-none");
     giantCard.classList.remove("d-none");
 
