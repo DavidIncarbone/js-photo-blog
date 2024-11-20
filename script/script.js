@@ -36,7 +36,6 @@ setTimeout(loader, 1000);
 function photoPrinter() {
     axios.get(baseUrl + resourcePhotos, { params })
         .then((photos) => {
-
             const cards = photos.data;
             console.log(cards);
             console.log(cards.length);
@@ -46,14 +45,13 @@ function photoPrinter() {
                 console.log(images);
                 const title = photo.title;
                 console.log(title);
-
                 template += `
                 <div class="card">
                 <div class="pin">
                     <img src="./img/pin.svg" alt="pin">
                 </div>
                 <div class="img-container">
-                    <img class="imagesClass" src="${images}" alt="${title}">
+                    <img class="imageCard" src="${images}" alt="${title}">
                 </div>
                 <div class="text-container">
                     <p>${title}</p>
@@ -62,18 +60,19 @@ function photoPrinter() {
                 container.innerHTML = template;
             }
 
-            const realImages = document.querySelectorAll(".imagesClass");
-            console.log(realImages);
-            for (let i = 0; i <= realImages.length - 1; i++) {
-                const singleImage = realImages[i];
-                console.log(singleImage);
-                singleImage.addEventListener("click", overlay);
-
-
-            }
             const realCards = document.querySelectorAll(".card");
-            const imgCard = realCards.querySelector(".imagesClass");
-            console.log(imgCard);
+            console.log(realCards);
+
+            realCards.forEach((singleCard) => {
+                singleCard.addEventListener("click", () => {
+                    const imageCard = singleCard.querySelector(".imageCard");
+                    console.log(imageCard);
+                    const giantImage = document.getElementById("giantImage");
+                    console.log(giantImage);
+                    giantImage.src = imageCard.src;
+                    overlay();
+                });
+            })
 
 
         })
@@ -83,17 +82,11 @@ function photoPrinter() {
 }
 
 
-
-function overlay(event) {
-    console.log(event.target);
-    const imageUrl = event.target.src;
-    const giantImage = document.getElementById("giantImage");
-    giantImage.src = imageUrl;
+function overlay() {
     overlayContainer.classList.add("overlay");
     overlayContainer.classList.remove("d-none");
     overlaySpinner.classList.remove("d-none");
     setTimeout(overlayLoader, 1000);
-
 
 }
 
