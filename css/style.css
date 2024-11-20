@@ -57,6 +57,21 @@ main {
     padding: 30px;
 }
 
+#spinner {
+
+    font-size: 5rem;
+    text-align: center;
+    line-height: 500px;
+}
+
+#overlaySpinner {
+
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    line-height: 500px;
+}
+
 
 .container {
     margin: 0 auto;

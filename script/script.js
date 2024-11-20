@@ -18,10 +18,18 @@ const giantCard = document.querySelector(".giantCard");
 console.log(giantCard);
 const overlayContainer = document.querySelector(".overlay-container");
 console.log(overlayContainer);
+const spinner = document.getElementById("spinner");
+console.log(spinner);
+const overlaySpinner = document.getElementById("overlaySpinner");
+console.log(overlaySpinner);
+
+
 
 // Call function
+
 photoPrinter();
 button.addEventListener("click", overlayCloser);
+setTimeout(loader, 1000);
 
 // ***FUNCTIONS***
 
@@ -83,18 +91,32 @@ function overlay(event) {
     giantImage.src = imageUrl;
     overlayContainer.classList.add("overlay");
     overlayContainer.classList.remove("d-none");
-    button.classList.remove("d-none");
-    giantCard.classList.remove("d-none");
+    overlaySpinner.classList.remove("d-none");
+    setTimeout(overlayLoader, 1000);
+
 
 }
 
 function overlayCloser() {
-    container.classList.remove("d-none");
+
     overlayContainer.classList.remove("overlay");
     button.classList.add("d-none");
     giantCard.classList.add("d-none");
 
 }
+
+function loader() {
+    spinner.classList.add("d-none");
+    container.classList.remove("d-none");
+}
+
+function overlayLoader() {
+    overlaySpinner.classList.add("d-none");
+    button.classList.remove("d-none");
+    giantCard.classList.remove("d-none");
+}
+
+
 
 
 
