@@ -19,12 +19,6 @@ console.log(giantCard);
 const overlayContainer = document.querySelector(".overlay-container");
 console.log(overlayContainer);
 
-
-
-
-
-
-
 // Call function
 photoPrinter();
 button.addEventListener("click", overlayCloser);

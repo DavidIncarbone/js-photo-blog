@@ -53,6 +53,7 @@ h1 {
 
 main {
     position: relative;
+    padding: 30px;
 }
 
 
@@ -116,6 +117,7 @@ main {
 .overlay-container {
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
 
 }
@@ -132,24 +134,33 @@ main {
 }
 
 button {
-
+    position: fixed;
+    top: 15%;
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     cursor: pointer;
 
+
+
+
 }
 
 button i {
     margin-left: 5px;
+
+
 }
 
 .giantCard {
 
     max-width: 500px;
-    margin: 0 auto;
-    padding: 30px 0;
+    padding: 50px 0;
     height: 500px;
+    position: fixed;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%);
 }
 
 /* ********** MEDIA QUERY ********** */
@@ -157,12 +168,27 @@ button i {
 /* Tablet */
 
 @media screen and (max-width: 790px) {
+
+    main {
+        padding: 100px;
+    }
+
     .card {
         width: calc((100% / 2) - 15px);
     }
 
     h1 {
         font-size: 3rem;
+    }
+
+
+    .giantCard {
+
+        max-width: 3000px;
+        margin: 0 auto;
+        padding: 30px 0;
+        height: 300px;
+
     }
 }
 
